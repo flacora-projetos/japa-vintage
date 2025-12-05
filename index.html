@@ -3,169 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Japa Vintage · Equipamentos Analógicos revisados</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
+    <title>Japa Vintage | Som Analógico & Equipamentos Clássicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'vintage-red': '#c3282e',
+              'vintage-red-dark': '#961c24',
+              'vintage-cream': '#f4f1e8',
+              'vintage-sand': '#ece6d9',
+              'vintage-charcoal': '#1f1f1f',
+              'vintage-wood': '#7a5230',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Space Grotesk"', 'sans-serif'],
+              script: ['"Great Vibes"', 'cursive'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f4f1e8;
+        scroll-behavior: smooth;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #ece6d9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c3282e;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #961c24;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
   <body>
-    <main class="page">
-      <header class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Goiânia · Equipamentos Vintage · Combos & Separados</p>
-          <h1>Japa Vintage</h1>
-          <p>
-            Som analógico reverenciado em combos prontos e equipamentos selecionados para quem
-            sente o calor dos vinis e das válvulas. Curadoria com precisão zen e acabamento artesanal.
-          </p>
-          <div class="cta">
-            <a href="https://wa.me/556284344419" target="_blank" rel="noreferrer" class="btn primary">
-              Conversar no WhatsApp
-            </a>
-            <a href="#contato" class="btn ghost">Falar com o time</a>
-          </div>
-        </div>
-        <figure class="hero-visual">
-          <div class="hero-image">
-            <img src="assets/banner-alternativa.jpg" alt="Banner premium Japa Vintage" />
-          </div>
-          <figcaption>Ressonância artesanal · Curadoria de áudio analógico e discos</figcaption>
-        </figure>
-      </header>
-
-      <section class="section manifesto">
-        <p class="section-title">Manifesto</p>
-        <p>
-          A música não é apenas ouvida; ela é sentida. Selecionamos equipamentos com precisão zen japonesa
-          e materiais nobres para montar combos e caixas que trazem a verdade do som analógico direto para
-          o seu espaço.
-        </p>
-      </section>
-
-      <section class="section combos" id="produtos">
-        <p class="section-title">Combos prontos e equipamentos separados</p>
-        <div class="grid cards">
-          <article class="card">
-            <div class="card-photo" style="background-image: url('assets/combo-system.jpg')"></div>
-            <h3>Combo Vinil Lounge</h3>
-            <p>
-              Toca-discos Gradiente com cápsula premium, pré-amplificador boutique e caixas vintage
-              em nogueira polida para salas íntimas.
-            </p>
-            <button type="button">Ver detalhes</button>
-          </article>
-          <article class="card">
-            <div class="card-photo" style="background-image: url('assets/receiver-gradiente.jpg')"></div>
-            <h3>Caixas & Amplificadores</h3>
-            <p>
-              Pares selecionados com alto-falantes originais, madeira nobre e captação fiel para quem
-              leva a audição a sério.
-            </p>
-            <button type="button">Ver detalhes</button>
-          </article>
-          <article class="card">
-            <div class="card-photo" style="background-image: url('assets/spectrum.jpg')"></div>
-            <h3>Acessórios selecionados</h3>
-            <p>
-              Braços de tonearm, cápsulas premium e válvulas com procedência garantida para completar o seu sistema.
-            </p>
-            <button type="button">Ver detalhes</button>
-          </article>
-        </div>
-      </section>
-
-      <section class="section features">
-        <p class="section-title">A experiência Japa Vintage</p>
-        <div class="grid feature-grid">
-          <article class="feature-card">
-            <div class="feature-icon">◉</div>
-            <h3>Seleção Curada</h3>
-            <p>
-              Cada peça entra no acervo após análise estética e sonora, mantendo registros de origem e procedência.
-            </p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon">✦</div>
-            <h3>Combos com Alma</h3>
-            <p>
-              Equipamentos configurados com equilíbrio entre calor vintage e dinamismo moderno para salas ou estúdios.
-            </p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon">⇄</div>
-            <h3>Entrega Nacional</h3>
-            <p>
-              Enviamos e acompanhamos instalações por todo o Brasil com embalagens seguras e suporte digital.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section gallery">
-        <p class="section-title">Identidade em destaque</p>
-        <div class="gallery-grid">
-          <figure class="identity-card">
-            <img src="assets/logo-dario-best.png" alt="Logo alternativo Japa Vintage" />
-            <figcaption>
-              O ícone traz o sol nascente e a onda sonora do toca-discos em vermelho aka e carvão.
-            </figcaption>
-          </figure>
-          <figure class="identity-card">
-            <img src="assets/turntable-wood.jpg" alt="Textura de madeira e válvulas" />
-            <figcaption>
-              Tipografia brush reforça a ideia de caligrafia japonesa artesanal com textura viva.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section pattern">
-        <p class="section-title">Detalhes sensoriais</p>
-        <p>
-          Padrões Seigaiha reinterpretados como ondas sonoras, texturas de grão e iluminação âmbar constroem
-          a atmosfera de uma vitrine com madeiras nobres, válvulas incandescentes e discos prontos para tocar histórias.
-        </p>
-      </section>
-
-      <section class="section contact" id="contato">
-        <div>
-          <strong>Operação</strong>
-          <p>Atendimento itinerante em Goiânia e entregas para todo o Brasil.</p>
-        </div>
-        <div>
-          <strong>Contato direto</strong>
-          <p>
-            WhatsApp:
-            <a href="https://wa.me/556284344419" class="contact-link" target="_blank" rel="noreferrer">
-              +55 62 8434-4419
-            </a>
-          </p>
-          <p>Email: contato@japavintage.com.br</p>
-        </div>
-        <div>
-          <strong>Instagram</strong>
-          <p>
-            <a href="https://www.instagram.com/japa_discos_lps_de_vinil/" class="contact-link">
-              @japa_discos_lps_de_vinil
-            </a>
-          </p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <span>Japa Vintage</span>
-        <p>O som que toca a alma com precisão zen e calor artesanal.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/japa_discos_lps_de_vinil/" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="https://wa.me/556284344419" target="_blank" rel="noreferrer">WhatsApp</a>
-        <span>Email: contato@japavintage.com.br</span>
-      </div>
-    </footer>
-  </body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
