@@ -4,51 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Japa Vintage | Som Analógico & Equipamentos Clássicos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CDN removed for production build -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'vintage-red': '#c3282e',
-              'vintage-red-dark': '#961c24',
-              'vintage-cream': '#f4f1e8',
-              'vintage-sand': '#ece6d9',
-              'vintage-charcoal': '#1f1f1f',
-              'vintage-wood': '#7a5230',
-            },
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['"Space Grotesk"', 'sans-serif'],
-              script: ['"Great Vibes"', 'cursive'],
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #f4f1e8;
-        scroll-behavior: smooth;
-      }
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #ece6d9;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #c3282e;
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #961c24;
-      }
-    </style>
+    <!-- Tailwind config no longer needed in production -->
   <script type="importmap">
 {
   "imports": {
