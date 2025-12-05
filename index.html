@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Principal -->
+    <title>Japa Vintage | Áudio Analógico & Equipamentos Clássicos</title>
+    <meta name="description" content="Japa Vintage: Curadoria especializada em áudio analógico, receivers, toca-discos e equipamentos clássicos em Goiânia. Aparelhos revisados com garantia.">
+    <meta name="keywords" content="áudio vintage, toca-discos, receiver, gradiente, polyvox, som analógico, goiânia, lps, vinil, japa vintage">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Japa Vintage | Curadoria de Áudio Analógico">
+    <meta property="og:description" content="Redescubra o calor do som autêntico. Equipamentos clássicos revisados em Goiânia. Apreciem sem moderação.">
+    <meta property="og:image" content="/founder-hero.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Inter"', 'sans-serif'],
+            },
+            colors: {
+              vintage: {
+                cream: '#f4f1ea',
+                red: '#c0392b',
+                wood: '#8d6e63',
+                charcoal: '#2c3e50',
+                gold: '#d4af37',
+              }
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-vintage-cream text-vintage-charcoal antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
