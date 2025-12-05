@@ -3,6 +3,20 @@ import { Section } from './components/Section';
 import { AudioConsultant } from './components/AudioConsultant';
 import { Disc, Music, Wrench, TrendingUp, Phone, MapPin, Menu, X, Instagram, Sparkles } from 'lucide-react';
 
+const assetPath = (file: string) => {
+  const base = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+  const sanitized = file.replace(/^\//, '');
+  return `${base}/${sanitized}`;
+};
+
+const assets = {
+  logo: assetPath('logo-japa.png'),
+  founder: assetPath('founder-hero.jpg'),
+  setup: assetPath('setup-gradiente.jpg'),
+  spectrum: assetPath('spectrum-gradiente.jpg'),
+  receiver: assetPath('receiver-pro2000.jpg'),
+};
+
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,7 +30,7 @@ const App: React.FC = () => {
             <div className="flex-shrink-0 flex items-center gap-3">
               {/* Logo Image */}
               <img 
-                src="/logo-japa.png" 
+                src={assets.logo} 
                 alt="Japa Vintage Logo" 
                 className="h-16 w-auto object-contain"
                 onError={(e) => {
@@ -94,7 +108,7 @@ const App: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-[8px] border-white rotate-2 hover:rotate-0 transition-transform duration-500 max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
                 <img 
-                  src="/founder-hero.jpg" 
+                  src={assets.founder} 
                   alt="Fundador Japa Vintage com Portal Torii" 
                   className="w-full h-auto object-cover transform scale-105 hover:scale-100 transition-transform duration-700"
                 />
@@ -118,7 +132,7 @@ const App: React.FC = () => {
              {/* System Setup Image */}
              <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-stone-100">
                 <img 
-                  src="/setup-gradiente.jpg" 
+                  src={assets.setup} 
                   alt="Sistema de Som Completo Gradiente e Toshiba" 
                   className="w-full h-auto object-cover" 
                 />
@@ -126,7 +140,7 @@ const App: React.FC = () => {
              {/* Spectrum Overlay */}
              <div className="absolute -bottom-10 -right-10 w-2/3 rounded-lg overflow-hidden shadow-xl border-4 border-white hidden md:block">
                 <img 
-                  src="/spectrum-gradiente.jpg" 
+                  src={assets.spectrum} 
                   alt="Spectrum Analyzer Gradiente" 
                   className="w-full h-auto"
                 />
@@ -223,7 +237,7 @@ const App: React.FC = () => {
             {/* Featured Large Item */}
             <div className="lg:col-span-2 row-span-1 md:row-span-2 relative group overflow-hidden rounded-xl border border-stone-700 shadow-2xl">
                <img 
-                src="/receiver-pro2000.jpg" 
+                src={assets.receiver} 
                 alt="Receiver Gradiente Pro 2000 MK II" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" 
                />
@@ -238,7 +252,7 @@ const App: React.FC = () => {
             {/* Secondary Item 1 */}
             <div className="relative group overflow-hidden rounded-xl border border-stone-700">
               <img 
-                src="/spectrum-gradiente.jpg" 
+                src={assets.spectrum} 
                 alt="Spectrum Analyzer" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               />
@@ -253,7 +267,7 @@ const App: React.FC = () => {
             <div className="relative group overflow-hidden rounded-xl border border-stone-700 bg-stone-800">
                {/* Reusing setup image cropped or similar vibe */}
               <img 
-                src="/setup-gradiente.jpg" 
+                src={assets.setup} 
                 alt="Toca Discos" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" 
                 style={{ objectPosition: 'top' }}
@@ -313,7 +327,7 @@ const App: React.FC = () => {
             
             {/* Brand */}
             <div className="lg:col-span-1">
-              <img src="/logo-japa.png" alt="Japa Vintage" className="h-16 w-auto mb-6 bg-vintage-cream/10 rounded-lg p-2" />
+              <img src={assets.logo} alt="Japa Vintage" className="h-16 w-auto mb-6 bg-vintage-cream/10 rounded-lg p-2" />
               <p className="mb-6 leading-relaxed text-stone-400 text-sm">
                 Curadoria especializada em áudio analógico. Restauramos a história da música através de equipamentos clássicos.
               </p>
